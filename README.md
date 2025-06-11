@@ -1,39 +1,37 @@
-📱 EduLawAI_MO - Mobile Frontend (Flutter)
-Đây là phần ứng dụng di động được xây dựng bằng Flutter cho dự án EduLawAI_MO – Chatbot AI hỗ trợ tra cứu và hỏi đáp các vấn đề liên quan đến luật giáo dục.
-
-Ứng dụng giúp người dùng tiếp cận các văn bản luật một cách dễ hiểu, nhanh chóng, và tiện lợi ngay trên điện thoại.
-
+📱 EduLawAI_MO - Mobile Frontend (React Native)
+Đây là phần ứng dụng di động được phát triển bằng React Native cho dự án EduLawAI_MO – Chatbot AI giúp người dùng tra cứu luật giáo dục và đặt câu hỏi pháp lý một cách dễ hiểu và nhanh chóng.
+----------------------------------------------------------------------------------------------------
 🎯 Tính năng chính
-💬 Chatbot AI: Giao tiếp với chatbot thông minh để hỏi đáp về luật giáo dục.
+💬 Trò chuyện với AI: Giao diện trò chuyện tự nhiên, dễ sử dụng với chatbot AI về luật giáo dục.
 
-🔍 Tra cứu điều khoản pháp luật: Tìm kiếm nội dung luật theo từ khóa hoặc chủ đề.
+🔍 Tra cứu điều luật: Tìm kiếm theo từ khóa hoặc điều khoản.
 
-🌐 Đa ngôn ngữ (tùy chọn): Hỗ trợ tiếng Việt và tiếng Anh.
+🌐 Hỗ trợ đa ngôn ngữ (tuỳ chọn): Tiếng Việt, Tiếng Anh.
 
-📄 Trích dẫn điều luật: Cung cấp tham chiếu chính xác từ các văn bản pháp lý.
+📄 Hiển thị trích dẫn luật: Cung cấp câu trả lời có nguồn trích dẫn cụ thể.
 
-🎨 Giao diện thân thiện, dễ dùng trên di động.
-
+📱 Thiết kế tối ưu cho thiết bị di động: Giao diện linh hoạt, dễ dùng trên Android và iOS.
+----------------------------------------------------------------------------------------------------
 🧱 Công nghệ sử dụng
-Flutter: Framework xây dựng ứng dụng di động đa nền tảng (Android & iOS).
+React Native (Expo hoặc CLI): Xây dựng ứng dụng di động đa nền tảng.
 
-Dart: Ngôn ngữ lập trình chính.
+JavaScript / TypeScript: Ngôn ngữ lập trình chính.
 
-Provider / Riverpod: Quản lý trạng thái (state management).
+React Navigation: Điều hướng giữa các màn hình.
 
-HTTP / Dio: Gửi yêu cầu đến backend AI chatbot.
+Axios / Fetch API: Gửi yêu cầu đến backend AI Chatbot.
 
-Firebase (tùy chọn): Xác thực, lưu trữ hoặc thông báo đẩy.
+Context API / Redux / Zustand (tùy chọn): Quản lý trạng thái ứng dụng.
 
-Responsive UI: Tối ưu hóa trải nghiệm trên nhiều kích thước màn hình.
-
-🚀 Khởi chạy ứng dụng
+Firebase / AsyncStorage (tuỳ chọn): Lưu trữ người dùng, dữ liệu cục bộ, thông báo đẩy.
+----------------------------------------------------------------------------------------------------
+🚀 Hướng dẫn khởi chạy
 Yêu cầu:
-Flutter SDK (>=3.0.0)
+Node.js (>=14)
 
-Android Studio hoặc Xcode (tùy nền tảng)
+Expo CLI hoặc React Native CLI
 
-Thiết bị giả lập hoặc điện thoại thật
+Android Studio / Xcode (nếu chạy trên thiết bị giả lập)
 
 Các bước thực hiện:
 bash
@@ -41,50 +39,55 @@ Sao chép
 Chỉnh sửa
 git clone https://github.com/yourusername/EduLawAI_MO_Mobile.git
 cd EduLawAI_MO_Mobile
-flutter pub get
-flutter run
+npm install
+npx expo start      # hoặc: npm start
+✅ Bạn có thể quét mã QR bằng ứng dụng Expo Go trên điện thoại để chạy nhanh ứng dụng.
+----------------------------------------------------------------------------------------------------
 📁 Cấu trúc thư mục
-css
+cpp
 Sao chép
 Chỉnh sửa
-lib/
-├── main.dart                // Điểm khởi đầu ứng dụng
-├── screens/                 // Các màn hình (Home, Chat, Luật, Giới thiệu)
-├── widgets/                 // Các widget tái sử dụng
-├── services/                // Gửi/nhận dữ liệu từ API
-├── models/                  // Cấu trúc dữ liệu (luật, câu hỏi, phản hồi)
-├── providers/               // Quản lý trạng thái (Provider hoặc Riverpod)
-└── utils/                   // Các hàm tiện ích
-📱 Giao diện mẫu (UI mockup)
-(Bạn có thể chèn hình ảnh hoặc link Figma tại đây nếu có)
-Giao diện bao gồm:
+EduLawAI_MO_Mobile/
+├── App.js
+├── assets/                // Hình ảnh, icon
+├── components/            // Các component tái sử dụng
+├── screens/               // Các màn hình chính (Chat, Luật, Giới thiệu)
+├── navigation/            // Cấu hình điều hướng
+├── services/              // API kết nối đến chatbot
+├── contexts/              // Context API (nếu dùng)
+├── utils/                 // Hàm tiện ích
+└── ...
+📷 Giao diện dự kiến
+Màn hình chính: Giới thiệu và nút bắt đầu chat
 
-Màn hình chính
+Màn hình Chatbot: Giao diện trò chuyện như ứng dụng nhắn tin
 
-Giao diện chatbot
+Màn hình Luật: Danh sách văn bản luật, tìm kiếm và xem chi tiết
 
-Trang tra cứu luật
+Màn hình Giới thiệu: Thông tin về app và chatbot
+----------------------------------------------------------------------------------------------------
+⚠️ Lưu ý pháp lý
+EduLawAI_MO không thay thế tư vấn pháp lý chuyên nghiệp.
+Các câu trả lời từ chatbot chỉ mang tính tham khảo và hỗ trợ thông tin, người dùng nên tìm đến luật sư hoặc cơ quan chức năng khi cần tư vấn chính thức.
+----------------------------------------------------------------------------------------------------
+🔮 Dự định phát triển tiếp theo
+📂 Lưu lịch sử trò chuyện
 
-Trang thông tin ứng dụng
+🌓 Giao diện Dark/Light mode
 
-⚠️ Lưu ý
-Ứng dụng chỉ mang tính chất tham khảo, hỗ trợ thông tin pháp luật giáo dục, không thay thế tư vấn pháp lý chính thức.
-Người dùng nên tham khảo ý kiến chuyên gia luật hoặc cơ quan nhà nước khi cần tư vấn pháp lý chính xác.
+🔐 Đăng nhập và cá nhân hóa
 
-📌 Định hướng phát triển
-✅ Giao diện tối/đẹp (dark/light mode)
+📲 Lưu trữ dữ liệu offline
 
-🔐 Đăng nhập/Đăng ký với Firebase Auth
-
-💡 Lưu lại lịch sử trò chuyện
-
-📲 Hỗ trợ ngoại tuyến (offline laws caching)
-
-📥 Tải tài liệu luật về máy
-
+🧩 Tích hợp AI nội bộ (local model)
+----------------------------------------------------------------------------------------------------
 🤝 Đóng góp
-Chúng tôi hoan nghênh mọi sự đóng góp!
-Fork repo, tạo branch mới, commit thay đổi và gửi Pull Request.
+Chào mừng mọi đóng góp từ cộng đồng!
 
-📜 Giấy phép
-Dự án được phát hành dưới MIT License.
+Fork repository
+
+Tạo branch mới: git checkout -b feature/tên-tính-năng
+
+Commit và push
+
+Gửi Pull Request
